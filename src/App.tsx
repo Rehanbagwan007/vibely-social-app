@@ -16,8 +16,8 @@ import AuthPage from "./pages/AuthPage";
 
 const queryClient = new QueryClient();
 
-// Get Clerk publishable key from environment
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+// Clerk publishable key
+const PUBLISHABLE_KEY = "pk_test_ZXZpZGVudC1mZXJyZXQtNjguY2xlcmsuYWNjb3VudHMuZGV2JA";
 
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Clerk Publishable Key");
