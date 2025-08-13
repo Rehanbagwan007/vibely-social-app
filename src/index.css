@@ -2,41 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Vibely Instagram Clone Design System */
 
 @layer base {
   :root {
+    /* Instagram-inspired color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 5%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 5%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 0 0% 5%;
+    
+    /* Instagram blue as primary */
+    --primary: 214 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Instagram secondary colors */
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 20%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 214 100% 59%;
+    
+    --radius: 8px;
+    
+    /* Instagram gradients */
+    --gradient-story: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --gradient-button: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    
+    /* Custom shadows */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    /* Instagram specific colors */
+    --instagram-blue: 214 100% 59%;
+    --instagram-gray: 0 0% 54%;
+    --instagram-light-gray: 0 0% 97%;
+    --instagram-border: 0 0% 86%;
+    
+    /* Text colors */
+    --text-primary: 0 0% 5%;
+    --text-secondary: 0 0% 54%;
+    --text-tertiary: 0 0% 74%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +76,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+    
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 214 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 80%;
+    
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 55%;
+    
+    --accent: 0 0% 8%;
+    --accent-foreground: 0 0% 91%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 214 100% 59%;
+    
+    --text-primary: 0 0% 95%;
+    --text-secondary: 0 0% 64%;
+    --text-tertiary: 0 0% 44%;
   }
 }
 
@@ -100,6 +116,82 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Instagram-style scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer components {
+  /* Instagram-style button variants */
+  .btn-instagram {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-4 py-2 font-medium transition-colors;
+  }
+
+  .btn-instagram-outline {
+    @apply border border-border text-foreground hover:bg-muted rounded-lg px-4 py-2 font-medium transition-colors;
+  }
+
+  .btn-follow {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-1.5 text-sm font-semibold transition-colors;
+  }
+
+  .btn-following {
+    @apply bg-muted text-foreground hover:bg-border border border-border rounded-lg px-6 py-1.5 text-sm font-semibold transition-colors;
+  }
+
+  /* Story ring gradient */
+  .story-ring {
+    background: var(--gradient-story);
+    padding: 2px;
+    border-radius: 50%;
+  }
+
+  .story-ring-inner {
+    @apply bg-background rounded-full p-0.5;
+  }
+
+  /* Instagram card style */
+  .instagram-card {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-card)];
+  }
+
+  /* Instagram input style */
+  .instagram-input {
+    @apply bg-muted border border-border rounded-lg px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  /* Navigation styles */
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-foreground hover:bg-muted transition-colors;
+  }
+
+  .nav-item-active {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-foreground bg-muted font-semibold;
+  }
+
+  /* Post interaction styles */
+  .post-action {
+    @apply p-2 hover:bg-muted rounded-full transition-colors;
+  }
+
+  .post-action-liked {
+    @apply p-2 hover:bg-muted rounded-full transition-colors text-red-500;
   }
 }
