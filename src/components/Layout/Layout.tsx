@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
           {/* Desktop Layout */}
           <div className="flex">
             <Sidebar />
-            <main className="flex-1 ml-64">
+            <main className="flex-1 ml-80">
               {children}
             </main>
           </div>

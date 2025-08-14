@@ -57,7 +57,7 @@ const PostCard = ({ post }: PostCardProps) => {
   };
 
   return (
-    <article className="instagram-card max-w-lg mx-auto bg-card">
+    <article className="instagram-card w-full bg-card">
       {/* Header */}
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
