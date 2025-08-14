@@ -57,9 +57,9 @@ const PostCard = ({ post }: PostCardProps) => {
   };
 
   return (
-    <article className="instagram-card w-full bg-card">
+    <article className="bg-background rounded-lg border border-gray-200 overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-between p-3">
         <div className="flex items-center gap-3">
           <img 
             src={post.userAvatar} 
@@ -67,7 +67,7 @@ const PostCard = ({ post }: PostCardProps) => {
             className="w-8 h-8 rounded-full object-cover"
           />
           <div>
-            <span className="font-semibold text-sm">{post.username}</span>
+            <span className="font-semibold text-sm text-foreground">{post.username}</span>
             {post.location && (
               <p className="text-xs text-muted-foreground">{post.location}</p>
             )}

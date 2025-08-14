@@ -8,7 +8,7 @@ const Feed = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className={`${isMobile ? 'space-y-6' : 'grid grid-cols-1 md:grid-cols-2 gap-6'}`}>
+    <div className={`${isMobile ? 'space-y-6' : 'grid grid-cols-2 gap-6'}`}>
       {posts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}

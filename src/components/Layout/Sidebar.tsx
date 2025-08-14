@@ -9,7 +9,7 @@ import {
   Film, 
   BarChart3,
   Settings,
-  PlusSquare
+  User
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CreatePostModal from '@/components/Modals/CreatePostModal';
@@ -22,9 +22,10 @@ const Sidebar = () => {
     { icon: Home, label: 'Home', path: '/' },
     { icon: Search, label: 'Feed', path: '/' },
     { icon: Compass, label: 'Explore', path: '/explore' },
-    { icon: MessageCircle, label: 'Profile', path: `/profile/${user?.username}` },
+    { icon: User, label: 'Profile', path: '/profile' },
     { icon: MessageCircle, label: 'Direct Messages', path: '/direct' },
     { icon: Film, label: 'IGTV', path: '/igtv' },
+    { icon: Settings, label: 'Settings', path: '/settings' },
     { icon: BarChart3, label: 'Stats', path: '/stats' },
   ];
 
@@ -62,7 +63,7 @@ const Sidebar = () => {
           </div>
 
           {/* Navigation */}
-          <div className="space-y-2">
+          <div className="space-y-1">
             {navItems.map((item) => {
               const Icon = item.icon;
               
@@ -71,7 +72,9 @@ const Sidebar = () => {
                   key={item.label}
                   to={item.path}
                   className={({ isActive }) =>
-                    `nav-item h-12 ${isActive ? 'font-bold bg-muted' : ''}`
+                    `flex items-center gap-3 px-4 py-3 rounded-lg text-foreground hover:bg-gray-100 transition-colors ${
+                      isActive ? 'bg-gray-100 font-medium' : ''
+                    }`
                   }
                 >
                   <Icon size={20} />
@@ -79,17 +82,6 @@ const Sidebar = () => {
                 </NavLink>
               );
             })}
-          </div>
-
-          {/* Settings at bottom */}
-          <div className="absolute bottom-6 left-6 right-6">
-            <NavLink
-              to="/settings"
-              className="nav-item h-12"
-            >
-              <Settings size={20} />
-              <span>Settings</span>
-            </NavLink>
           </div>
         </div>
       </nav>

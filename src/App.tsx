@@ -10,6 +10,7 @@ import { store, persistor } from './store/store';
 import Layout from './components/Layout/Layout';
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import UserProfile from "./pages/UserProfile";
 import Chat from "./pages/Chat";
 import NotFound from "./pages/NotFound";
 import AuthPage from "./pages/AuthPage";
@@ -36,7 +37,8 @@ const App = () => (
                 <Layout>
                   <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/profile/:username?" element={<Profile />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/profile/:username" element={<UserProfile />} />
                     <Route path="/direct" element={<Chat />} />
                     <Route path="/direct/:chatId" element={<Chat />} />
                     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
